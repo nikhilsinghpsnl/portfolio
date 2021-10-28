@@ -20,7 +20,7 @@ section h1 {
     font-size: 350%;
     font-weight: bolder;
     text-transform: capitalize;
-    animation: blink 3s infinite alternate-reverse;
+    animation: blink 5s infinite alternate-reverse;
 }
 section p{
     font-size: 1rem;
@@ -28,7 +28,7 @@ section p{
 
 @keyframes blink {
     from{
-        opacity: 0.2;
+        opacity: 0.1;
     }
     to{
         opacity: 1;
