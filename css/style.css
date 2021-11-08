@@ -1,198 +1,276 @@
-/* Google fonts */
+/* font family */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
+/* Root Variables */
 :root{
-    --light: #ffffff;
-    --dark: #000000;
-    --ternary: #999999
+    --dark:#000;
+    --light:#fff;
+    --ternery:#999;
 }
 
-/* Common CSS */
-h1, h2, h3, h4, h5, h6, p{
-    margin: 0;
+
+/* common CSS */
+h1, h2, h3, h4, h5, h6, p, ul{
     padding: 0;
+    margin: 0;
 }
 h1{
     font-size: 92px;
+    line-height: 122px;
     font-weight: 700;
-    letter-spacing: 20px;
 }
 h2{
-    font-size: 60px;
+    font-size: 72px;
+    line-height: 92px;
     font-weight: 600;
-    letter-spacing: 20px;
 }
 h3{
     font-size: 48px;
+    line-height: 68px;
     font-weight: 600;
 }
 h4{
-    font-size: 28px;
-    font-weight: 600;
-}
-h5{
-    font-size: 28px;
-    font-weight: 300;
-    letter-spacing: 20px;
-}
-h6{
-    font-size: 18px;
+    font-size: 48px;
+    line-height: 68px;
     font-weight: 500;
 }
-ul, li{
-    margin: 0;
-    list-style: none;
+h5{
+    font-size: 36px;
+    line-height: 56px;
+    font-weight: 500;
+}
+h6{
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 500;
+}
+p{
+    font-size: 14px;
+    line-height: 27px;
+    font-weight: 400;
 }
 a{
     text-decoration: none;
 }
+ul li{
+    list-style: none;
+}
 img{
-    max-width: 100%;
-    padding: 0 10px;
+    width: 100%;
 }
-.titleHeading{
-    margin-bottom: 15px;
+body{
+    font-size: 14px;
+    line-height: 27px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    color: var(--light);
+    background-color: var(--dark);
 }
-.titleSubHeading{
-    margin: 15px 0;
-    color: var(--ternary);
-}
-.description{
-    margin-bottom: 30px;
+.containerCustom{
+    width: 1530px;
+    margin: auto;
+    padding: 100px 15px;
 }
 .btnLight{
-    border: 2px transparent solid;
+    border: 2px solid transparent;
     border-radius: 30px;
-    outline: none;
-    padding: 10px 20px;
+    padding: 10px 40px;
+    font-weight: 500;
+    font-size: 16px;
     background-color: var(--light);
     color: var(--dark);
-    font-size: 18px;
-    font-weight: 600;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
 }
 .btnLight:hover{
     border-color: var(--light);
     background-color: transparent;
     color: var(--light);
 }
-.containerCustom{
-    padding: 0 60px;
-}
-.br-20{
-    border-radius: 50%;
-}
-body{
-    font-size: 14px;
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-    color: var(--light);
-    line-height: 30px;
-    overflow-x: hidden;
-    background-color: var(--dark);
-}
-/* Banner CSS */
+
+
+/* banner CSS */
 .banner{
-   background-image: url(../images/MainBackground.png), linear-gradient(to right, #000, #000);
-   background-repeat: no-repeat;
-   background-size: cover;
-   height: 100vh;
+    overflow: hidden;
 }
-.banner .scrollDown{
+.banner .bannerBackground{
+    width: 100vw;
     height: 100vh;
-    padding-bottom: 15px;
+    background-image: url(../images/MainBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bannerTitle, .bannerDesignation{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bannerTitle{
+    left: 15%;
+}
+.bannerDesignation{
+    right: 5%;
+}
+.scrollDown{
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bannerTitle h2 span, .bannerDesignation{
+    color: var(--ternery);
 }
 .scrollDown i{
     font-size: 28px;
-    animation: upDown 0.5s linear infinite alternate;
+    animation: upDown 1s linear alternate infinite;
 }
 @keyframes upDown{
     from{
-        transform: translateY(10px);
+        transform: translateY(15px);
     }
     to{
         transform: translateY(0px);
     }
 }
-.banner h3{
-    color: var(--ternary);
-}
 
-/* Header CSS */
+/* header CSS */
 header{
-    position: sticky;
-    top: 0;
-    background-color: var(--dark);
-    z-index: 100;
-}
-nav a.navBrand{
-    font-size: 28px;
-    color: var(--light);
-    font-weight: 600;
-}
-nav ul li a{
-    color: var(--light);
-    transition: all 0.5s linear;
-    border-bottom: 2px transparent solid;
-}
-nav ul li a:hover{
-    color: var(--light);
-    border-color:var(--light);
-}
-
-/* About Me Css */
-.aboutMe, .experience{
-    padding: 60px 0;
-}
-
-/* Experience CSS */
-.experience ul li{
-    width: 200px;
-    height: 200px;
-    position: relative;
-    margin: 60px 30px;
-}
-.inner{
-    position: absolute;
-    z-index: 6;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 90%;
-    width: 90%;
-    margin: 0;
-    background: var(--dark);
-    border-radius: 100%;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-}
-.circle .progress{
-    position: absolute;
-    height: 100%;
     width: 100%;
-    border-radius: 100%;
-    background: var(--light);
+    z-index: 100;
+    background-color: var(--dark);
 }
-.progress.html{
-    clip: rect(0px, 200px, 200px, 20px);
+nav .navBrand{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--light);
 }
-.progress.css{
-    clip: rect(0px, 200px, 200px, 40px);
+.navMenu li a{
+    color: var(--ternery);
+    font-size: 16px;
+    transition: color 0.2s linear;
 }
-.progress.js{
-    clip: rect(0px, 200px, 200px, 60px);
+.navMenu li a:hover{
+    color: var(--light);
 }
-.progress.react{
-    clip: rect(0px, 200px, 200px, 60px);
+.navMenu li a.active{
+    color: var(--light);
+    font-weight: 500;
 }
-.progress.adobexd{
-    clip: rect(0px, 200px, 200px, 0px);
+.navMenuIcon{
+    display: none !important;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
 }
-.progress.figma{
-    clip: rect(0px, 200px, 200px, 40px);
+.navMenuIcon .line{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: var(--light);
+    transition: all 0.3s linear;
 }
-.progress.photoshop{
-    clip: rect(0px, 200px, 200px, 100px);
+.line::before,
+.line::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 3px;
+    background-color: var(--light);
+    transition: all 0.3s linear;
 }
-.progress.illustrator{
-    clip: rect(0px, 200px, 200px, 100px);
+.line::before{
+    transform: translateY(-10px);
+}
+.line::after{
+    transform: translateY(10px);
+}
+#navMenuIcon.open{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+#navMenuIcon.open .line{
+    transform: translateX(150px);
+}
+#navMenuIcon.open .line::before{
+    transform: rotate(45deg) translate(-100px, 100px);
+}
+#navMenuIcon.open .line::after{
+    transform: rotate(-45deg) translate(-100px, -100px);
+}
+
+/* About Me CSS */
+.aboutMe{
+    position: relative;
+}
+#aboutMePic{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40%;
+    height: 100vh;
+    overflow: hidden;
+}
+.mySkills .description img{
+    width: 50px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+/* My Works CSS */
+.myWorkContents li{
+    position: relative;
+    width: 20%;
+    margin: 30px;
+    overflow: hidden;
+}
+.myWorkHover{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    place-items: center;
+    transition: all 0.3s linear;
+}
+.myWorkContents li:hover .myWorkHover{
+    left: 0;
+}
+
+/* Footer CSS */
+footer .footerText{
+    text-align: end;
+    padding-right: 30px;
+    border-right: 2px solid var(--ternery);
+}
+.footerText .mailId{
+    color: var(--light);
+}
+.socialLink li a{
+    margin: 30px 0 30px 30px;
+    border: 2px solid var(--light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+.socialLink li i{
+    font-size: 22px;
+    color: var(--light);
+}
+.footerForm input{
+    border: 2px solid var(--light);
+    border-radius: 30px;
+    padding: 10px 15px;
+    background: transparent;
+    width: 400px;
+    margin: 30px 0;
+    color: var(--light);
 }

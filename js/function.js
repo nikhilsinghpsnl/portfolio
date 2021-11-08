@@ -1,16 +1,17 @@
+// Nav Menu Script
+let menuBtn = document.getElementById('navMenuIcon');
+let menu = document.getElementById('navMenu');
 
-// Banner Scripts
-let banner = document.getElementById('banner');
-let bannerTitle = document.getElementById('bannerTitle');
-let bannerDesignation = document.getElementById('bannerDesignation');
+let menuOpen = false;
 
-window.addEventListener('scroll' , function(){
-    let value = window.scrollY;
-    bannerTitle.style.paddingRight = 50 - value + 'px';
-    bannerTitle.style.transition = '1.5s';
-    bannerTitle.style.opacity = 1 - value;
-
-    bannerDesignation.style.paddingLeft = 50 - value + 'px';
-    bannerDesignation.style.transition = '1.5s';
-    bannerDesignation.style.opacity = 1 - value;
+menuBtn.addEventListener('click', () => {
+    if(!menuOpen){
+        menuBtn.classList.add('open');
+        menu.classList.add('open');
+        menuOpen = true;
+    }else{
+        menuBtn.classList.remove('open');
+        menu.classList.remove('open');
+        menuOpen = false;
+    }
 })

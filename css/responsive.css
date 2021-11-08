@@ -1,0 +1,116 @@
+/* for mobile view */
+@media screen and (max-width: 428px){
+    h1{
+        font-size: 72px;
+        line-height: 92px;
+        font-weight: 700;
+    }
+    h2{
+        font-size: 60px;
+        line-height: 82px;
+        font-weight: 600;
+    }
+    h3{
+        font-size: 36px;
+        line-height: 46px;
+        font-weight: 600;
+    }
+    h4{
+        font-size: 30px;
+        line-height: 50px;
+        font-weight: 500;
+    }
+    h5{
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 500;
+    }
+    .containerCustom{
+        width: 100%;
+        margin: auto;
+        padding: 30px 15px;
+    }
+
+    /* banner CSS */
+    .bannerTitle{
+        top: 70%;
+    }
+    .bannerDesignation{
+        display: none;
+    }
+
+    /* Header CSS */
+    .navMenu{
+        display: none;
+    }
+    #navMenu{
+        display: block;
+        opacity: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        transition: all 0.3s linear;
+    }
+    #navMenu.open{
+        left: 0;
+        opacity: 1;
+    }
+    #navMenu.open ul{
+        width: 100vw;
+        height: 100vh;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #navMenu.open ul li{
+        margin: 30px;
+    }
+    .navMenuIcon{
+        display: grid !important;
+    }
+
+    /* About Me CSS */
+    #aboutMePic{
+        display: none;
+    }
+
+    /* My Works CSS */
+    .myWorks{
+        margin-bottom: 100px;
+    }
+    .myWorkContents li{
+        width: 100%;
+        margin: 15px;
+    }
+    /* Footer CSS */
+    footer .footerText{
+        text-align: center;
+        padding-right: 0px;
+        border-right: none;
+        margin-bottom: 30px;
+    }
+    .footerText p{
+        font-size: 12px;
+    }
+    .footerText p span{
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    .socialLink{
+        justify-content: center !important;
+    }
+    .socialLink li a{
+        margin: 30px 15px;
+    }
+    .footerForm{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    .footerForm input{
+        width: 90%;
+    }
+}
